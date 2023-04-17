@@ -1,19 +1,15 @@
-import { ClerkProvider, SignedIn, SignedOut } from "@clerk/clerk-expo";
-import HomeScreen from "./(home)/home";
-import SignInScreen from "./(auth)/signIn";
-import { PUBLISHABLE_KEY } from "@env";
-import SignUpScreen from "./(auth)/signUp";
+import { SignedIn, SignedOut } from "@clerk/clerk-expo";
+import { Redirect } from "expo-router";
 
 export default function InitialScreen() {
   return (
-    <ClerkProvider publishableKey={String(PUBLISHABLE_KEY)}>
+    <>
       <SignedIn>
-        <HomeScreen />
+        <Redirect href={"/home"} />
       </SignedIn>
       <SignedOut>
-        <SignInScreen />
-        <SignUpScreen />
+        <Redirect href={"/signIn.screen"} />
       </SignedOut>
-    </ClerkProvider>
+    </>
   );
 }
