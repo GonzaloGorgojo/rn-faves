@@ -7,6 +7,14 @@ module.exports = function (api) {
     plugins: [
       ["module:react-native-dotenv"],
       require.resolve("expo-router/babel"),
+      [
+        "module-resolver",
+        {
+          alias: {
+            "@src": "./src",
+          },
+        },
+      ],
     ],
   };
 };
