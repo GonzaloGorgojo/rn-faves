@@ -1,6 +1,6 @@
 # Faves App
 
-This is a mobile application to show, and share peoples interest.
+This is a mobile application to discover and share your interests. And also Connect with like-minded individuals.
 
 ## Installation
 
