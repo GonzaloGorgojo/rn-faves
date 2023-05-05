@@ -3,7 +3,6 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  TouchableOpacity,
   View,
 } from "react-native";
 import { useSignUp } from "@clerk/clerk-expo";
@@ -12,7 +11,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import SignButton from "@src/components/signButton/SignButton.component";
 import UserForm from "@src/components/userForm/UserForm.component";
 import { Image } from "expo-image";
-import UserFormStyle from "@src/components/userForm/UserForm.style";
+import UserFormStyle from "@src/components/userForm/userForm.style";
 import { useRouter } from "expo-router";
 
 const SignUpScreen = (): JSX.Element => {
