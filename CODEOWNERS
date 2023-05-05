@@ -12,7 +12,3 @@
 # @GonzaloGorgojo will be requested for
 # review when someone opens a pull request.
 *       @GonzaloGorgojo
-
-# In this example, @GonzaloGorgojo owns any file in root directory
-# anywhere in your repository.
-/ @GonzaloGorgojo
