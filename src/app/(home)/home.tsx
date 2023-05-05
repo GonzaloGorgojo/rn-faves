@@ -1,12 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import MoviesFeed from "@src/components/moviesFeed/MoviesFeed.component";
+import SearchBar from "@src/components/searchBar/SearchBar.component";
+import { StyleSheet, View } from "react-native";
 
-export default function HomeScreen() {
+export default function HomeScreen(): JSX.Element {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Esta es la Home</Text>
-      <View style={styles.separator} />
-    </SafeAreaView>
+    <View style={styles.container}>
+      <SearchBar />
+      <MoviesFeed />
+    </View>
   );
 }
 
@@ -14,15 +15,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
   },
 });

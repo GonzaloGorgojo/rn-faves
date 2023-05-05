@@ -65,8 +65,8 @@ const SignInScreen = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
+    justifyContent: "space-evenly",
   },
   bgImage: {
     flex: 1,
@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   logoContainer: {
-    width: "85%",
-    height: 70,
+    width: "100%",
+    height: "25%",
   },
   logo: {
     flex: 1,

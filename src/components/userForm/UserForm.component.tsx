@@ -1,6 +1,6 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TextInput, View } from "react-native";
-import UserFormStyle from "./UserForm.style";
+import UserFormStyle from "./userForm.style";
 
 type userFormProps = {
   isUsername: boolean;
