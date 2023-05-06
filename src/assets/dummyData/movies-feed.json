@@ -1,82 +1,102 @@
 [
   {
     "id": 1,
+    "userId": "dasd121d",
     "tag": "movie",
-    "username": "Lebronjames",
+    "username": "lebronjames",
     "movieName": "godfather",
     "movieScore": 10,
-    "movieComment": "The Godfather is an absolute masterpiece and one of the greatest films of all time. The storytelling, acting, and cinematography are all top-notch. Marlon Brando's performance as Don Vito Corleone is legendary, and the film's themes of power, family, and loyalty are timeless. I could watch this movie over and over again and never get tired of it."
+    "movieComment": "The Godfather is an absolute masterpiece and one of the greatest films of all time. The storytelling, acting, and cinematography are all top-notch. Marlon Brando's performance as Don Vito Corleone is legendary, and the film's themes of power, family, and loyalty are timeless. I could watch this movie over and over again and never get tired of it.",
+    "isLiked": true
   },
   {
     "id": 2,
+    "userId": "lk31m41m",
     "tag": "movie",
-    "username": "Liomessi",
+    "username": "liomessi",
     "movieName": "avatar",
     "movieScore": 8,
-    "movieComment": "Avatar is a visually stunning film that transports you to another world. The special effects are incredible, and the attention to detail in creating the planet Pandora is impressive. While the story may not be the most original, it still manages to be engaging and thought-provoking. Overall, Avatar is a great movie that is definitely worth watching"
+    "movieComment": "Avatar is a visually stunning film that transports you to another world. The special effects are incredible, and the attention to detail in creating the planet Pandora is impressive. While the story may not be the most original, it still manages to be engaging and thought-provoking. Overall, Avatar is a great movie that is definitely worth watching",
+    "isLiked": false
   },
   {
     "id": 3,
+    "userId": "12mll13ml",
     "tag": "movie",
     "username": "EmmaWatson",
     "movieName": "The Shawshank Redemption",
     "movieScore": 9,
-    "movieComment": "An all-time classic!"
+    "movieComment": "An all-time classic!",
+    "isLiked": false
   },
   {
     "id": 4,
+    "userId": "12m31kl",
     "tag": "movie",
     "username": "RobertDowneyJr",
     "movieName": "The Dark Knight",
     "movieScore": 10,
-    "movieComment": "Heath Ledger's Joker was incredible"
+    "movieComment": "Heath Ledger's Joker was incredible",
+    "isLiked": true
   },
   {
     "id": 5,
+    "userId": "09asd9a87d",
     "tag": "movie",
     "username": "TomCruise",
     "movieName": "Top Gun",
     "movieScore": 7,
-    "movieComment": "Great action scenes"
+    "movieComment": "Great action scenes",
+    "isLiked": false
   },
   {
     "id": 6,
+    "userId": "l12m3lk13m",
     "tag": "movie",
     "username": "JenniferLawrence",
     "movieName": "The Hunger Games",
     "movieScore": 8,
-    "movieComment": "Really enjoyed the book and movie"
+    "movieComment": "Really enjoyed the book and movie",
+    "isLiked": false
   },
   {
     "id": 7,
+    "userId": "123ñlk1m",
     "tag": "movie",
     "username": "ChrisHemsworth",
     "movieName": "Thor: Ragnarok",
     "movieScore": 9,
-    "movieComment": "One of the funniest Marvel movies"
+    "movieComment": "One of the funniest Marvel movies",
+    "isLiked": true
   },
   {
     "id": 8,
+    "userId": "l21j398",
     "tag": "movie",
     "username": "GalGadot",
     "movieName": "Wonder Woman",
     "movieScore": 8,
-    "movieComment": "Loved seeing a female superhero on screen"
+    "movieComment": "Loved seeing a female superhero on screen",
+    "isLiked": false
   },
   {
     "id": 9,
+    "userId": "9898asfa",
     "tag": "movie",
     "username": "WillSmith",
     "movieName": "Independence Day",
     "movieScore": 7,
-    "movieComment": "Classic 90s action movie"
+    "movieComment": "Classic 90s action movie",
+    "isLiked": false
   },
   {
     "id": 10,
+    "userId": "lkmoi123",
     "tag": "movie",
     "username": "ScarlettJohansson",
     "movieName": "Lost in Translation",
     "movieScore": 9,
-    "movieComment": "Beautifully shot and acted"
+    "movieComment": "Beautifully shot and acted",
+    "isLiked": true
   }
 ]

@@ -8,10 +8,13 @@ import SignButton from "@src/components/signButton/SignButton.component";
 import { Image } from "expo-image";
 
 const SignInScreen = (): JSX.Element => {
+  const router = useRouter();
+
   const { signIn, setActive, isLoaded } = useSignIn();
+
+  const [showPassword, setShowPassword] = useState<boolean>(true);
   const [emailAddress, setEmailAddress] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const router = useRouter();
 
   const onSignInPress = async (): Promise<void> => {
     if (!isLoaded) {
@@ -45,6 +48,8 @@ const SignInScreen = (): JSX.Element => {
           ></Image>
         </View>
         <UserForm
+          setShowPassword={setShowPassword}
+          showPassword={showPassword}
           isUsername={false}
           emailAddress={emailAddress}
           setEmailAddress={setEmailAddress}

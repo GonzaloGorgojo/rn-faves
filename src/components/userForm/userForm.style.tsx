@@ -10,7 +10,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: "grey",
     padding: 3,
-    paddingLeft: 10,
+    paddingHorizontal: 10,
     marginVertical: 10,
     borderRadius: 5,
   },

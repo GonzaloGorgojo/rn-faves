@@ -1,6 +1,7 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { TextInput, View } from "react-native";
+import { TextInput, TouchableOpacity, View } from "react-native";
 import UserFormStyle from "./userForm.style";
+import { Ionicons } from "@expo/vector-icons";
 
 type userFormProps = {
   isUsername: boolean;
@@ -8,6 +9,8 @@ type userFormProps = {
   setEmailAddress: React.Dispatch<React.SetStateAction<string>>;
   password: string;
   setPassword: React.Dispatch<React.SetStateAction<string>>;
+  showPassword: boolean;
+  setShowPassword: React.Dispatch<React.SetStateAction<boolean>>;
   username?: string;
   setUsername?: React.Dispatch<React.SetStateAction<string>>;
 };
@@ -20,6 +23,8 @@ const UserForm = ({
   setPassword,
   username,
   setUsername,
+  setShowPassword,
+  showPassword,
 }: userFormProps): JSX.Element => {
   return (
     <SafeAreaView style={UserFormStyle.container}>
@@ -43,14 +48,27 @@ const UserForm = ({
         keyboardType="email-address"
         onChangeText={(emailAddress) => setEmailAddress(emailAddress)}
       />
-
-      <TextInput
-        style={UserFormStyle.input}
-        value={password}
-        placeholder="Password..."
-        secureTextEntry={true}
-        onChangeText={(password) => setPassword(password)}
-      />
+      <View
+        style={{
+          ...UserFormStyle.input,
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
+        <TextInput
+          value={password}
+          placeholder="Password..."
+          secureTextEntry={showPassword}
+          onChangeText={(password) => setPassword(password)}
+        />
+        <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+          {!showPassword ? (
+            <Ionicons name="eye-outline" size={24} color="black" />
+          ) : (
+            <Ionicons name="eye-off-outline" size={24} color="black" />
+          )}
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };

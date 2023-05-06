@@ -1,6 +1,6 @@
 import { ClerkProvider } from "@clerk/clerk-expo";
 import { Stack } from "expo-router";
-import { PUBLISHABLE_KEY } from "@env";
+import { CLERK_PUBLISHABLE_KEY } from "@env";
 import * as SecureStore from "expo-secure-store";
 
 export {
@@ -29,7 +29,7 @@ export default function RootLayout() {
   return (
     <ClerkProvider
       tokenCache={tokenCache}
-      publishableKey={String(PUBLISHABLE_KEY)}
+      publishableKey={String(CLERK_PUBLISHABLE_KEY)}
     >
       <Stack screenOptions={{ headerShown: false }} />
     </ClerkProvider>

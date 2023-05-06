@@ -1,16 +1,11 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { moviesFeedCardStyle } from "./moviesFeed.style";
 import commonStyles from "@src/common/commonStyles";
-import { FeedCardType } from "@src/common/enums";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-
-type CardProps = {
-  username: string;
-  movieName: string;
-  movieScore: number;
-  movieComment: string;
-  tag: string;
-};
+import { useRouter } from "expo-router";
+import { colors } from "@src/common/colors";
+import { AntDesign } from "@expo/vector-icons";
+import { MoviesFeedCardType } from "@src/common/types";
 
 const MoviesFeedCard = ({
   username,
@@ -18,11 +13,28 @@ const MoviesFeedCard = ({
   movieScore,
   movieComment,
   tag,
-}: CardProps): JSX.Element => {
+  userId,
+  isLiked,
+  id,
+}: MoviesFeedCardType): JSX.Element => {
+  const router = useRouter();
+
+  //TODO: make call to backend and update state
+  const setIsLiked = (id: number) => {
+    alert(`will update state ${id}`);
+  };
+
   return (
     <View style={moviesFeedCardStyle.cardContainer}>
       <View style={moviesFeedCardStyle.userAndIconContainer}>
-        <TouchableOpacity onPress={() => alert("go to user profile")}>
+        <TouchableOpacity
+          onPress={() =>
+            router.push({
+              pathname: "/selectedProfile.screen",
+              params: { userId },
+            })
+          }
+        >
           <Text
             style={{
               ...commonStyles.title,
@@ -39,7 +51,13 @@ const MoviesFeedCard = ({
         )}
       </View>
       <TouchableOpacity onPress={() => alert("go to movie info")}>
-        <Text style={{ ...commonStyles.title, textTransform: "capitalize" }}>
+        <Text
+          style={{
+            ...commonStyles.title,
+            textTransform: "capitalize",
+            color: colors.customBlue,
+          }}
+        >
           {movieName}
         </Text>
       </TouchableOpacity>
@@ -47,6 +65,15 @@ const MoviesFeedCard = ({
         <Text style={{ fontSize: 16 }}>User Ranking: {movieScore}</Text>
       </View>
       <Text style={moviesFeedCardStyle.comment}>{movieComment}</Text>
+      <View style={moviesFeedCardStyle.likeIconContainer}>
+        <TouchableOpacity onPress={() => setIsLiked(id)}>
+          {isLiked ? (
+            <AntDesign name="like1" size={30} color="black" />
+          ) : (
+            <AntDesign name="like2" size={30} color="black" />
+          )}
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
