@@ -1,4 +1,3 @@
-import { colors } from "@src/common/colors";
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
@@ -7,7 +6,8 @@ export default StyleSheet.create({
     justifyContent: "space-evenly",
     alignItems: "center",
     width: "90%",
-    marginVertical: 15,
+    marginTop: 15,
+    marginBottom: 10,
   },
   textInput: {
     borderWidth: 1,

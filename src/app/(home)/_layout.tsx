@@ -15,7 +15,9 @@ export default function HomeLayout() {
       <Stack
         screenOptions={{
           headerRight: () => (
-            <TouchableOpacity onPress={() => router.push("(user)/profile")}>
+            <TouchableOpacity
+              onPress={() => router.push("(user)/profile.screen")}
+            >
               <FontAwesome5 name="user-circle" size={35} color="black" />
             </TouchableOpacity>
           ),

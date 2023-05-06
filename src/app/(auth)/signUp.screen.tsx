@@ -15,14 +15,18 @@ import UserFormStyle from "@src/components/userForm/userForm.style";
 import { useRouter } from "expo-router";
 
 const SignUpScreen = (): JSX.Element => {
+  const router = useRouter();
+
   const { isLoaded, signUp, setActive } = useSignUp();
+
+  const [showPassword, setShowPassword] = useState<boolean>(true);
   const [username, setUsername] = useState<string>("");
   const [emailAddress, setEmailAddress] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [code, setCode] = useState<string>("");
+
   const [pendingVerification, setPendingVerification] =
     useState<boolean>(false);
-  const [code, setCode] = useState<string>("");
-  const router = useRouter();
 
   // start the sign up process.
   const onSignUpPress = async () => {
@@ -34,11 +38,13 @@ const SignUpScreen = (): JSX.Element => {
       await signUp.create({
         emailAddress,
         password,
+        username,
       });
 
       // send the email.
-      await signUp.prepareEmailAddressVerification({ strategy: "email_code" });
-
+      await signUp.prepareEmailAddressVerification({
+        strategy: "email_code",
+      });
       // change the UI to our pending section.
       setPendingVerification(true);
     } catch (err: any) {
@@ -57,9 +63,13 @@ const SignUpScreen = (): JSX.Element => {
         code,
       });
 
-      await setActive({ session: completeSignUp.createdSessionId });
-      alert("Account has been created successfully");
-      router.replace("/");
+      await setActive({
+        session: completeSignUp.createdSessionId,
+      });
+      if (completeSignUp.status == "complete") {
+        alert("Account has been created successfully");
+        router.replace("/");
+      }
     } catch (err: any) {
       alert(err.errors ? err.errors[0].message : err);
     }
@@ -80,6 +90,8 @@ const SignUpScreen = (): JSX.Element => {
               ></Image>
             </View>
             <UserForm
+              showPassword={showPassword}
+              setShowPassword={setShowPassword}
               isUsername={true}
               username={username}
               setUsername={setUsername}
@@ -95,8 +107,8 @@ const SignUpScreen = (): JSX.Element => {
         {pendingVerification && (
           <>
             <Text style={styles.codeTitle}>
-              We have send you an email with the code{"\n"} to verify your
-              email.
+              We have send you an email with the code,{"\n"}please insert the
+              code below.
             </Text>
             <TextInput
               style={{ ...UserFormStyle.input, width: "40%" }}

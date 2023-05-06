@@ -1,3 +1,3 @@
 declare module "@env" {
-  export const PUBLISHABLE_KEY: string;
+  export const CLERK_PUBLISHABLE_KEY: string;
 }

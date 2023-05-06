@@ -1,14 +1,27 @@
 #
-# CODEOWNERS file for the iUGO UI repository
+
+# CODEOWNERS file for the fave-s repository
+
 #
+
 # This file sets the owners for the repository to request their review.
+
 # Each line is a file pattern followed by one or more owners.
+
 #
+
 #
+
 # Author: Gonzalo Gorgojo
+
 #
+
 # These owners will be the default owners for everything in
+
 # the repo. Unless a later match takes precedence,
+
 # @GonzaloGorgojo will be requested for
+
 # review when someone opens a pull request.
-*       @GonzaloGorgojo
+
+-       @GonzaloGorgojo

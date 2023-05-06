@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 
 export const moviesFeedStyle = StyleSheet.create({
   container: {
-    width: "90%",
+    width: "92%",
     justifyContent: "center",
     alignItems: "center",
     flex: 1,
@@ -37,6 +37,7 @@ export const moviesFeedCardStyle = StyleSheet.create({
     padding: 6,
     borderRadius: 10,
     textAlign: "justify",
+    fontSize: 14.3,
   },
   userAndIconContainer: {
     flexDirection: "row",
@@ -48,5 +49,12 @@ export const moviesFeedCardStyle = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "flex-end",
     marginBottom: 3,
+  },
+  likeIconContainer: {
+    flexDirection: "row",
+    width: "100%",
+    justifyContent: "flex-start",
+    marginVertical: 10,
+    paddingHorizontal: 5,
   },
 });
