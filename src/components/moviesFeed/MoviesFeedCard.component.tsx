@@ -28,7 +28,7 @@ const MoviesFeedCard = ({
         <Link
           asChild
           href={{
-            pathname: "/selectedProfile.screen",
+            pathname: "(user)/selectedProfile.screen",
             params: { userId },
           }}
         >
@@ -62,9 +62,9 @@ const MoviesFeedCard = ({
       <View style={moviesFeedCardStyle.likeIconContainer}>
         <TouchableOpacity onPress={() => setIsLiked(id)}>
           {isLiked ? (
-            <AntDesign name="like1" size={30} color="black" />
+            <AntDesign name="star" size={30} color="black" />
           ) : (
-            <AntDesign name="like2" size={30} color="black" />
+            <AntDesign name="staro" size={30} color="black" />
           )}
         </TouchableOpacity>
       </View>

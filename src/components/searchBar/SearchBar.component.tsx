@@ -8,6 +8,7 @@ const SearchBar = (): JSX.Element => {
       <TextInput
         style={searchBarStyles.textInput}
         placeholder="Search users..."
+        placeholderTextColor="grey"
       />
       <TouchableOpacity>
         <MaterialIcons name="person-search" size={40} color="black" />

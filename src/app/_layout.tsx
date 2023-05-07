@@ -1,7 +1,11 @@
 import { ClerkProvider } from "@clerk/clerk-expo";
-import { Stack } from "expo-router";
+import { Link, Stack } from "expo-router";
 import { CLERK_PUBLISHABLE_KEY } from "@env";
 import * as SecureStore from "expo-secure-store";
+import { Entypo, FontAwesome5 } from "@expo/vector-icons";
+import { Text, TouchableOpacity } from "react-native";
+import commonStyles from "@src/common/commonStyles";
+import { colors } from "@src/common/colors";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -31,7 +35,37 @@ export default function RootLayout() {
       tokenCache={tokenCache}
       publishableKey={String(CLERK_PUBLISHABLE_KEY)}
     >
-      <Stack screenOptions={{ headerShown: false }} />
+      <Stack
+        screenOptions={{
+          headerTitle: () => (
+            <>
+              <Entypo name="emoji-happy" size={24} color="black" />
+              <Text style={{ ...commonStyles.title, fontSize: 25 }}>
+                {" "}
+                Fave-s{" "}
+              </Text>
+            </>
+          ),
+          headerStyle: {
+            backgroundColor: colors.mainColor,
+          },
+          headerTitleAlign: "center",
+          headerBackTitle: "Back",
+        }}
+      >
+        <Stack.Screen
+          name="(home)/home.screen"
+          options={{
+            headerRight: () => (
+              <Link href={"(user)/profile.screen"} asChild>
+                <TouchableOpacity>
+                  <FontAwesome5 name="user-circle" size={35} color="black" />
+                </TouchableOpacity>
+              </Link>
+            ),
+          }}
+        />
+      </Stack>
     </ClerkProvider>
   );
 }

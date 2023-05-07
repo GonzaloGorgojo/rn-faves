@@ -5,10 +5,10 @@ export default function InitialScreen() {
   return (
     <>
       <SignedIn>
-        <Redirect href={"/home.screen"} />
+        <Redirect href={"(home)/home.screen"} />
       </SignedIn>
       <SignedOut>
-        <Redirect href={"/signIn.screen"} />
+        <Redirect href={"(auth)/signIn.screen"} />
       </SignedOut>
     </>
   );

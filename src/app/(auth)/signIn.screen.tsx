@@ -2,7 +2,7 @@ import { ImageBackground, StyleSheet, View } from "react-native";
 import { useSignIn } from "@clerk/clerk-expo";
 import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Link, useRouter } from "expo-router";
+import { Link, Stack, useRouter } from "expo-router";
 import UserForm from "@src/components/userForm/UserForm.component";
 import SignButton from "@src/components/signButton/SignButton.component";
 import { Image } from "expo-image";
@@ -41,6 +41,11 @@ const SignInScreen = (): JSX.Element => {
       source={require("@src/assets/images/wall.jpg")}
     >
       <SafeAreaView style={styles.container}>
+        <Stack.Screen
+          options={{
+            title: `Sign In`,
+          }}
+        />
         <View style={styles.logoContainer}>
           <Image
             style={styles.logo}
