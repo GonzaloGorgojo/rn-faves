@@ -115,6 +115,7 @@ const SignUpScreen = (): JSX.Element => {
               value={code}
               placeholder="Code..."
               onChangeText={(code) => setCode(code)}
+              placeholderTextColor="grey"
             />
             <SignButton title="Verify Email" onPress={onPressVerify} />
           </>

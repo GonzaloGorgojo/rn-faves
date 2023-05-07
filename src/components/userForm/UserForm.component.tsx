@@ -30,6 +30,7 @@ const UserForm = ({
     <SafeAreaView style={UserFormStyle.container}>
       {isUsername ? (
         <TextInput
+          placeholderTextColor="grey"
           style={UserFormStyle.input}
           value={username}
           placeholder="Username..."
@@ -41,6 +42,7 @@ const UserForm = ({
         ""
       )}
       <TextInput
+        placeholderTextColor="grey"
         style={UserFormStyle.input}
         autoCapitalize="none"
         value={emailAddress}
@@ -56,6 +58,7 @@ const UserForm = ({
         }}
       >
         <TextInput
+          placeholderTextColor="grey"
           value={password}
           placeholder="Password..."
           secureTextEntry={showPassword}

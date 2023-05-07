@@ -1,4 +1,4 @@
-import { Stack, useRouter } from "expo-router";
+import { Link, Stack, useRouter } from "expo-router";
 import { Entypo } from "@expo/vector-icons";
 import { Text, TouchableOpacity } from "react-native";
 import { MoviesContext, useMovies } from "@src/contexts/likedMovies.context";
@@ -15,11 +15,11 @@ export default function HomeLayout() {
       <Stack
         screenOptions={{
           headerRight: () => (
-            <TouchableOpacity
-              onPress={() => router.push("(user)/profile.screen")}
-            >
-              <FontAwesome5 name="user-circle" size={35} color="black" />
-            </TouchableOpacity>
+            <Link href={"(user)/profile.screen"} asChild>
+              <TouchableOpacity>
+                <FontAwesome5 name="user-circle" size={35} color="black" />
+              </TouchableOpacity>
+            </Link>
           ),
 
           headerTitle: () => (

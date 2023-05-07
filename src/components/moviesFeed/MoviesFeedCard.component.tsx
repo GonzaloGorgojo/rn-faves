@@ -2,7 +2,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { moviesFeedCardStyle } from "./moviesFeed.style";
 import commonStyles from "@src/common/commonStyles";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { useRouter } from "expo-router";
+import { Link } from "expo-router";
 import { colors } from "@src/common/colors";
 import { AntDesign } from "@expo/vector-icons";
 import { MoviesFeedCardType } from "@src/common/types";
@@ -17,8 +17,6 @@ const MoviesFeedCard = ({
   isLiked,
   id,
 }: MoviesFeedCardType): JSX.Element => {
-  const router = useRouter();
-
   //TODO: make call to backend and update state
   const setIsLiked = (id: number) => {
     alert(`will update state ${id}`);
@@ -27,23 +25,19 @@ const MoviesFeedCard = ({
   return (
     <View style={moviesFeedCardStyle.cardContainer}>
       <View style={moviesFeedCardStyle.userAndIconContainer}>
-        <TouchableOpacity
-          onPress={() =>
-            router.push({
-              pathname: "/selectedProfile.screen",
-              params: { userId },
-            })
-          }
+        <Link
+          asChild
+          href={{
+            pathname: "/selectedProfile.screen",
+            params: { userId },
+          }}
         >
-          <Text
-            style={{
-              ...commonStyles.title,
-              fontSize: 18,
-            }}
-          >
-            @{username}
-          </Text>
-        </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={{ ...commonStyles.title, fontSize: 17 }}>
+              @{username}
+            </Text>
+          </TouchableOpacity>
+        </Link>
         {tag === "movie" ? (
           <MaterialCommunityIcons name="movie" size={25} color="black" />
         ) : (

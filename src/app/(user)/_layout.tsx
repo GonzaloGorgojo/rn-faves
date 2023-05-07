@@ -26,6 +26,7 @@ export default function HomeLayout() {
             backgroundColor: colors.mainColor,
           },
           headerTitleAlign: "center",
+          headerBackTitle: "Back",
         }}
       ></Stack>
     </MoviesContext.Provider>

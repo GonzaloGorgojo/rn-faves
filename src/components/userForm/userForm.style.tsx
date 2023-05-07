@@ -6,6 +6,7 @@ export default StyleSheet.create({
     marginVertical: 10,
   },
   input: {
+    height: 35,
     fontSize: 15,
     borderWidth: 1,
     borderColor: "grey",
