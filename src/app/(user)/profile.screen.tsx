@@ -1,15 +1,16 @@
 import { useAuth, useUser } from "@clerk/clerk-expo";
 import SignButton from "@src/components/signButton/SignButton.component";
-import { Redirect, Stack } from "expo-router";
+import { Redirect, Stack, useNavigation } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
-import { useMovies } from "@src/contexts/likedMovies.context";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { colors } from "@src/common/colors";
+import { StackActions } from "@react-navigation/native";
+import UserProfileInfo from "@src/components/userProfile/UserProfileInfo.component";
 
 export default function ProfileScreen(): JSX.Element {
-  const { isLoaded, isSignedIn, user } = useUser();
+  const { isLoaded, isSignedIn } = useUser();
   const { signOut } = useAuth();
-  const context = useMovies();
+  const navigation = useNavigation();
 
   if (!isLoaded) {
     //TODO: Use a different loader
@@ -20,25 +21,21 @@ export default function ProfileScreen(): JSX.Element {
 
   const signUserOut = async () => {
     await signOut();
+    const resetAction = StackActions.pop();
+    navigation.dispatch(resetAction);
     return <Redirect href="/" />;
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView edges={["left", "right", "bottom"]} style={styles.container}>
       <Stack.Screen
         options={{
           title: `Profile`,
         }}
       />
-      <Text style={styles.title}>Hi {user.username} !</Text>
-
-      <View style={styles.movies}>
-        <Text style={styles.title}>Movies</Text>
-        <Text>{context?.name ?? "You have no movies liked"}</Text>
-      </View>
-
+      <UserProfileInfo />
       <SignButton
-        customStyle={styles.button}
+        customStyle={{ backgroundColor: colors.customRed }}
         title="Sign Out"
         onPress={signUserOut}
       />
@@ -50,20 +47,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "space-evenly",
-  },
-  movies: {
-    width: "80%",
-    height: "30%",
-    borderColor: "red",
-    borderWidth: 2,
-    alignItems: "center",
-  },
-  title: {
-    fontWeight: "bold",
-    fontSize: 20,
-  },
-  button: {
-    backgroundColor: colors.customRed,
+    justifyContent: "space-between",
   },
 });

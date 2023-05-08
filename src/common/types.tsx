@@ -2,6 +2,7 @@ export interface SelectedUserProfileType {
   userId: string;
   username: string;
   description: string;
+  startsCollected: number;
 }
 
 export interface MoviesFeedCardType {
