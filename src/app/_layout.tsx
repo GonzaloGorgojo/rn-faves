@@ -6,6 +6,7 @@ import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 import { Text, TouchableOpacity } from "react-native";
 import commonStyles from "@src/common/commonStyles";
 import { colors } from "@src/common/colors";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export {
   // Catch any errors thrown by the Layout component.
