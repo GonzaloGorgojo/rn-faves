@@ -13,6 +13,7 @@ import UserForm from "@src/components/userForm/UserForm.component";
 import { Image } from "expo-image";
 import UserFormStyle from "@src/components/userForm/userForm.style";
 import { Stack, useRouter } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 const SignUpScreen = (): JSX.Element => {
   const router = useRouter();
@@ -81,6 +82,8 @@ const SignUpScreen = (): JSX.Element => {
       source={require("@src/assets/images/wall.jpg")}
     >
       <SafeAreaView style={styles.container}>
+        <StatusBar style="dark" />
+
         <Stack.Screen
           options={{
             title: `Sign Up`,

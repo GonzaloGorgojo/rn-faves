@@ -43,7 +43,7 @@ export default function RootLayout() {
               <Entypo name="emoji-happy" size={24} color="black" />
               <Text style={{ ...commonStyles.title, fontSize: 25 }}>
                 {" "}
-                Fave-s{" "}
+                Fave-s
               </Text>
             </>
           ),
@@ -55,6 +55,18 @@ export default function RootLayout() {
         }}
       >
         <Stack.Screen
+          name="(auth)/signIn.screen"
+          options={{
+            title: `Sign In`,
+          }}
+        />
+        <Stack.Screen
+          name="(auth)/signUp.screen"
+          options={{
+            title: `Sign Up`,
+          }}
+        />
+        <Stack.Screen
           name="(home)/home.screen"
           options={{
             headerRight: () => (
@@ -64,6 +76,12 @@ export default function RootLayout() {
                 </TouchableOpacity>
               </Link>
             ),
+          }}
+        />
+        <Stack.Screen
+          name="(user)/profile.screen"
+          options={{
+            title: `Profile`,
           }}
         />
       </Stack>
