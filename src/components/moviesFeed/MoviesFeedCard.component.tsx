@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import { colors } from "@src/common/colors";
 import { AntDesign } from "@expo/vector-icons";
-import { MoviesFeedCardType } from "@src/common/types";
+import { IMoviesFeedCard } from "@src/common/interfaces";
 
 const MoviesFeedCard = ({
   username,
@@ -16,7 +16,7 @@ const MoviesFeedCard = ({
   userId,
   isLiked,
   id,
-}: MoviesFeedCardType): JSX.Element => {
+}: IMoviesFeedCard): JSX.Element => {
   //TODO: make call to backend and update state
   const setIsLiked = (id: number) => {
     alert(`will update state ${id}`);

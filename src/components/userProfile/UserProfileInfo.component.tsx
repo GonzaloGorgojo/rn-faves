@@ -1,14 +1,13 @@
-import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, TouchableOpacity, View } from "react-native";
 import { userProfileInfoStyle } from "./userProfile.style";
 import userInfo from "@src/assets/dummyData/user-profile.json";
 import { useState } from "react";
 import * as WebBrowser from "expo-web-browser";
 import { AntDesign } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import { colors } from "@src/common/colors";
 
-const UserProfileInfo = (): JSX.Element => {
+const CUserProfileInfo = (): JSX.Element => {
   //TODO: type this state, will come from context call
   const [user, setUser] = useState(userInfo);
 
@@ -17,17 +16,10 @@ const UserProfileInfo = (): JSX.Element => {
   };
 
   return (
-    <SafeAreaView
-      edges={["bottom", "left", "right"]}
-      style={userProfileInfoStyle.container}
-    >
+    <View style={userProfileInfoStyle.container}>
       <View style={userProfileInfoStyle.rows}>
         <AntDesign name="user" size={32} color="black" />
         <Text style={userProfileInfoStyle.userText}>@{user.username}</Text>
-      </View>
-      <View style={userProfileInfoStyle.rows}>
-        <MaterialCommunityIcons name="email-outline" size={32} color="black" />
-        <Text style={userProfileInfoStyle.userText}>{user.email}</Text>
       </View>
       <View style={userProfileInfoStyle.rows}>
         <Ionicons name="bulb-outline" size={32} color="black" />
@@ -49,8 +41,8 @@ const UserProfileInfo = (): JSX.Element => {
           Stars collected: {user.starsCollected}
         </Text>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
-export default UserProfileInfo;
+export default CUserProfileInfo;

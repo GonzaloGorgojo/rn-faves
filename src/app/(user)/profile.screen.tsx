@@ -5,8 +5,9 @@ import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { colors } from "@src/common/colors";
 import { StackActions } from "@react-navigation/native";
-import UserProfileInfo from "@src/components/userProfile/UserProfileInfo.component";
+import CUserProfileInfo from "@src/components/userProfile/UserProfileInfo.component";
 import { StatusBar } from "expo-status-bar";
+import CUserProfileTabs from "@src/components/userProfile/UserProfileTabs.component";
 
 export default function ProfileScreen(): JSX.Element {
   const { isLoaded, isSignedIn } = useUser();
@@ -31,7 +32,8 @@ export default function ProfileScreen(): JSX.Element {
     <SafeAreaView edges={["left", "right", "bottom"]} style={styles.container}>
       <StatusBar style="dark" />
 
-      <UserProfileInfo />
+      <CUserProfileInfo />
+      <CUserProfileTabs />
       <SignButton
         customStyle={{ backgroundColor: colors.customRed }}
         title="Sign Out"

@@ -1,13 +1,13 @@
 import { Text, View } from "react-native";
 import selectedUserProfileStyle from "./selectedUserProfile.style";
-import { SelectedUserProfileType } from "@src/common/types";
 import commonStyles from "@src/common/commonStyles";
+import { ISelectedUserProfile } from "@src/common/interfaces";
 
 const SelectedUserProfile = ({
   username,
   description,
   startsCollected,
-}: SelectedUserProfileType): JSX.Element => {
+}: ISelectedUserProfile): JSX.Element => {
   return (
     <View style={selectedUserProfileStyle.container}>
       <Text style={commonStyles.title}>{username}</Text>

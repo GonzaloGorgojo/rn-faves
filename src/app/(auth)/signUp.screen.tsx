@@ -84,11 +84,6 @@ const SignUpScreen = (): JSX.Element => {
       <SafeAreaView style={styles.container}>
         <StatusBar style="dark" />
 
-        <Stack.Screen
-          options={{
-            title: `Sign Up`,
-          }}
-        />
         {!pendingVerification && (
           <>
             <View style={styles.logoContainer}>
