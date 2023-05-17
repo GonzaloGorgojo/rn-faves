@@ -44,11 +44,6 @@ const SignInScreen = (): JSX.Element => {
       <SafeAreaView style={styles.container}>
         <StatusBar style="dark" />
 
-        <Stack.Screen
-          options={{
-            title: `Sign In`,
-          }}
-        />
         <View style={styles.logoContainer}>
           <Image
             style={styles.logo}

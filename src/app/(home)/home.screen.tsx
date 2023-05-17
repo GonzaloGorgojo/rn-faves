@@ -1,6 +1,6 @@
 import { useAuth } from "@clerk/clerk-expo";
 import MoviesFeed from "@src/components/moviesFeed/MoviesFeed.component";
-import SearchBar from "@src/components/searchBar/SearchBar.component";
+import CSearchBar from "@src/components/searchBar/SearchBar.component";
 import { Redirect, Stack, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
@@ -19,12 +19,7 @@ export default function HomeScreen(): JSX.Element {
   return (
     <SafeAreaView edges={["bottom"]} style={styles.container}>
       <StatusBar style="dark" />
-      <Stack.Screen
-        options={{
-          title: `Home`,
-        }}
-      />
-      <SearchBar />
+      <CSearchBar />
       <MoviesFeed />
     </SafeAreaView>
   );

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "type": "Music",
+    "song": "one more time",
+    "artist": "daft punk",
+    "action": "TopTen",
+    "user": "gongorgojo"
+  },
+  {
+    "id": 2,
+    "type": "Movie",
+    "movie": "batman",
+    "description": "best movie",
+    "action": "Commented",
+    "user": "gongorgojo"
+  },
+  {
+    "id": 3,
+    "type": "Music",
+    "song": "rest of my life",
+    "artist": "soja",
+    "action": "Starred",
+    "user": "liomessi"
+  },
+  {
+    "id": 4,
+    "type": "Movie",
+    "movie": "the godfather",
+    "description": "amazing movie",
+    "action": "Starred",
+    "user": "lebronjames"
+  }
+]

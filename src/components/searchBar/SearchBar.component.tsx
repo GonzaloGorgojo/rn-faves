@@ -2,7 +2,7 @@ import { TextInput, TouchableOpacity, View } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import searchBarStyles from "./searchBar.style";
 
-const SearchBar = (): JSX.Element => {
+const CSearchBar = (): JSX.Element => {
   return (
     <View style={searchBarStyles.container}>
       <TextInput
@@ -17,4 +17,4 @@ const SearchBar = (): JSX.Element => {
   );
 };
 
-export default SearchBar;
+export default CSearchBar;

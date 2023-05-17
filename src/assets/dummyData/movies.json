@@ -1,0 +1,21 @@
+[
+  { "id": 1, "rank": 1, "movie": "batman", "description": "good movie" },
+  {
+    "id": 2,
+    "rank": 2,
+    "movie": "the godfather",
+    "description": "great movie"
+  },
+  {
+    "id": 3,
+    "rank": 3,
+    "movie": "the godfather 2",
+    "description": "best movie ever"
+  },
+  {
+    "id": 4,
+    "rank": 4,
+    "movie": "the godfather 3",
+    "description": "super movie"
+  }
+]

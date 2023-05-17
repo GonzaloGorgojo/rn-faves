@@ -4,8 +4,8 @@ import profilesInfo from "@src/assets/dummyData/followed-user.json";
 import { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import SelectedUserProfile from "@src/components/selectedUserProfile/SelectedUserProfileCard.component";
-import { SelectedUserProfileType } from "@src/common/types";
 import { Ionicons } from "@expo/vector-icons";
+import { ISelectedUserProfile } from "@src/common/interfaces";
 
 export default function VisitProfileScreen(): JSX.Element {
   const { userId } = useLocalSearchParams();
@@ -13,7 +13,7 @@ export default function VisitProfileScreen(): JSX.Element {
 
   //TODO: change type
   const [selectedUserProfile, setSelectedUserProfile] =
-    useState<SelectedUserProfileType>();
+    useState<ISelectedUserProfile>();
 
   const getSelectedUserProfile = (userId: string | string[]) => {
     //TODO: we will make a call to get the info about the user, for now its mocked
