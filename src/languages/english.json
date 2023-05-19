@@ -1,0 +1,11 @@
+{
+  "translation": {
+    "code": "Code...",
+    "create-account": "Don't have account? Click here",
+    "email-code-sended": "We have send you an email with the code, please insert the code below.",
+    "sign-in": "Sign In",
+    "sign-out": "Sign Out",
+    "sign-up": "Sign Up",
+    "verify-email": "Verify Email"
+  }
+}

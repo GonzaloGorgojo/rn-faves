@@ -8,8 +8,10 @@ import { StackActions } from "@react-navigation/native";
 import CUserProfileInfo from "@src/components/userProfile/UserProfileInfo.component";
 import { StatusBar } from "expo-status-bar";
 import CUserProfileTabs from "@src/components/userProfile/UserProfileTabs.component";
+import { useTranslation } from "react-i18next";
 
 export default function ProfileScreen(): JSX.Element {
+  const { t } = useTranslation();
   const { isLoaded, isSignedIn } = useUser();
   const { signOut } = useAuth();
   const navigation = useNavigation();
@@ -36,7 +38,7 @@ export default function ProfileScreen(): JSX.Element {
       <CUserProfileTabs />
       <SignButton
         customStyle={{ backgroundColor: colors.customRed }}
-        title="Sign Out"
+        title={t("sign-out")}
         onPress={signUserOut}
       />
     </SafeAreaView>

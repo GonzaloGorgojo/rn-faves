@@ -1,0 +1,11 @@
+{
+  "translation": {
+    "code": "Codigo...",
+    "create-account": "No tienes cuenta? Presione aquí",
+    "email-code-sended": "Te enviamos un codigo al correo ingresado, ingresalo abajo.",
+    "sign-in": "Iniciar Sesion",
+    "sign-out": "Cerrar Sesion",
+    "sign-up": "Crear Usuario",
+    "verify-email": "Verificar Email"
+  }
+}

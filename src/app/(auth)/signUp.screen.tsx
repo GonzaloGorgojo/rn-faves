@@ -12,11 +12,13 @@ import SignButton from "@src/components/signButton/SignButton.component";
 import UserForm from "@src/components/userForm/UserForm.component";
 import { Image } from "expo-image";
 import UserFormStyle from "@src/components/userForm/userForm.style";
-import { Stack, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { useTranslation } from "react-i18next";
 
 const SignUpScreen = (): JSX.Element => {
   const router = useRouter();
+  const { t } = useTranslation();
 
   const { isLoaded, signUp, setActive } = useSignUp();
 
@@ -104,23 +106,20 @@ const SignUpScreen = (): JSX.Element => {
               setPassword={setPassword}
             />
 
-            <SignButton title="Sign up" onPress={onSignUpPress} />
+            <SignButton title={t("sign-up")} onPress={onSignUpPress} />
           </>
         )}
         {pendingVerification && (
           <>
-            <Text style={styles.codeTitle}>
-              We have send you an email with the code,{"\n"}please insert the
-              code below.
-            </Text>
+            <Text style={styles.codeTitle}>{t("email-code-sended")}</Text>
             <TextInput
               style={{ ...UserFormStyle.input, width: "40%" }}
               value={code}
-              placeholder="Code..."
+              placeholder={t("code") ?? undefined}
               onChangeText={(code) => setCode(code)}
               placeholderTextColor="grey"
             />
-            <SignButton title="Verify Email" onPress={onPressVerify} />
+            <SignButton title={t("verify-email")} onPress={onPressVerify} />
           </>
         )}
       </SafeAreaView>
@@ -138,8 +137,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   logoContainer: {
-    width: "85%",
-    height: 70,
+    width: "80%",
+    height: "25%",
   },
   logo: {
     flex: 1,
@@ -147,7 +146,9 @@ const styles = StyleSheet.create({
   },
   codeTitle: {
     fontSize: 20,
-    marginVertical: 10,
+    marginVertical: 5,
+    marginHorizontal: 10,
+    textAlign: "justify",
   },
 });
 
