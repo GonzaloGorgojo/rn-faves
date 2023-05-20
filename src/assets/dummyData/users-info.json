@@ -1,0 +1,92 @@
+[
+  {
+    "userId": "u1D3gAqw25r",
+    "username": "lebronjames",
+    "email": "lebronjames@gmail.com",
+    "personalLink": "https://www.lebronjames.com",
+    "starsCollected": 9000,
+    "description": "NBA superstar",
+    "country": "United States"
+  },
+  {
+    "userId": "aF9s7d1h4Gj",
+    "username": "liomessi",
+    "email": "liomessi@gmail.com",
+    "personalLink": "https://www.liomessi.com",
+    "starsCollected": 100,
+    "description": "Football legend",
+    "country": "Argentina"
+  },
+  {
+    "userId": "vB6c8K2z9Xp",
+    "username": "EmmaWatson",
+    "email": "emmawatson@gmail.com",
+    "personalLink": "https://www.emmawatson.com",
+    "starsCollected": 120,
+    "description": "Actress and activist",
+    "country": "United Kingdom"
+  },
+  {
+    "userId": "nM3b4C1x5Pq",
+    "username": "RobertDowneyJr",
+    "email": "robertdowneyjr@gmail.com",
+    "personalLink": "https://www.robertdowneyjr.com",
+    "starsCollected": 300,
+    "description": "Actor",
+    "country": "United States"
+  },
+  {
+    "userId": "zR8t6B0n2Vm",
+    "username": "TomCruise",
+    "email": "tomcruise@gmail.com",
+    "personalLink": "https://www.tomcruise.com",
+    "starsCollected": 50,
+    "description": "Actor and producer",
+    "country": "United States"
+  },
+  {
+    "userId": "jlawrenc123",
+    "username": "JenniferLawrence",
+    "email": "jlawrence@gmail.com",
+    "personalLink": "https://www.jenniferlawrence.com",
+    "starsCollected": 111,
+    "description": "Academy Award-winning actress",
+    "country": "United States"
+  },
+  {
+    "userId": "chemswo456",
+    "username": "ChrisHemsworth",
+    "email": "chemsworth@gmail.com",
+    "personalLink": "https://www.chrishemsworth.com",
+    "starsCollected": 123,
+    "description": "God of Thunder",
+    "country": "Australia"
+  },
+  {
+    "userId": "ggadot789",
+    "username": "GalGadot",
+    "email": "ggadot@gmail.com",
+    "personalLink": "https://www.galgadot.com",
+    "starsCollected": 123,
+    "description": "Wonder Woman",
+    "country": "Israel"
+  },
+  {
+    "userId": "wsmith101",
+    "username": "WillSmith",
+    "email": "wsmith@gmail.com",
+    "personalLink": "https://www.willsmith.com",
+    "starsCollected": 432,
+    "description": "Actor and rapper",
+    "country": "United States"
+  },
+  {
+    "userId": "sjohanss234",
+    "username": "ScarlettJohansson",
+    "email": "sjohansson@gmail.com",
+    "personalLink": "https://www.scarlettjohansson.com",
+    "starsCollected": 657,
+    "description": "Black Widow",
+    "country": "United States"
+  }
+]

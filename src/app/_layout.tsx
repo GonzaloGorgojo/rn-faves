@@ -7,6 +7,7 @@ import { Text, TouchableOpacity } from "react-native";
 import commonStyles from "@src/common/commonStyles";
 import { colors } from "@src/common/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { EnProfileType } from "@src/common/enums";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -70,7 +71,13 @@ export default function RootLayout() {
           name="(home)/home.screen"
           options={{
             headerRight: () => (
-              <Link href={"(user)/profile.screen"} asChild>
+              <Link
+                href={{
+                  pathname: "(user)/profile.screen",
+                  params: { type: EnProfileType.Personal },
+                }}
+                asChild
+              >
                 <TouchableOpacity>
                   <FontAwesome5 name="user-circle" size={35} color="black" />
                 </TouchableOpacity>

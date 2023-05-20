@@ -15,6 +15,16 @@ export const userProfileInfoStyle = StyleSheet.create({
     fontSize: 18,
     marginLeft: 5,
   },
+  editFollow: {
+    position: "absolute",
+    right: 20,
+  },
+  editFollowButton: {
+    borderColor: "black",
+    borderWidth: 1,
+    borderRadius: 50,
+    padding: 7,
+  },
 });
 
 export const userProfileTabsStyle = StyleSheet.create({

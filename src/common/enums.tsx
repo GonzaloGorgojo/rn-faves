@@ -17,3 +17,8 @@ export enum EnActivity {
   Commented = "Commented",
   TopTen = "TopTen",
 }
+
+export enum EnProfileType {
+  Personal = "Personal",
+  Visitor = "Visitor",
+}

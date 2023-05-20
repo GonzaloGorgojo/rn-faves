@@ -6,6 +6,7 @@ import { Link } from "expo-router";
 import { colors } from "@src/common/colors";
 import { AntDesign } from "@expo/vector-icons";
 import { IMoviesFeedCard } from "@src/common/interfaces";
+import { EnProfileType } from "@src/common/enums";
 
 const MoviesFeedCard = ({
   username,
@@ -28,8 +29,8 @@ const MoviesFeedCard = ({
         <Link
           asChild
           href={{
-            pathname: "(user)/selectedProfile.screen",
-            params: { userId },
+            pathname: "(user)/profile.screen",
+            params: { type: EnProfileType.Visitor, userId },
           }}
         >
           <TouchableOpacity>

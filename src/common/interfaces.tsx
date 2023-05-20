@@ -1,12 +1,5 @@
 import { EnActivity, EnProfileFeed, EnTopTen } from "./enums";
 
-export interface ISelectedUserProfile {
-  userId: string;
-  username: string;
-  description: string;
-  startsCollected: number;
-}
-
 export interface IMoviesFeedCard {
   id: number;
   userId: string;
@@ -42,4 +35,14 @@ export interface IActivitycard {
   artist?: string;
   movie?: string;
   description?: string;
+}
+
+export interface IUserProfile {
+  userId: string;
+  username: string;
+  email: string;
+  personalLink: string;
+  starsCollected: number;
+  description: string;
+  country: string;
 }

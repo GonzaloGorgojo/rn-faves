@@ -3,13 +3,17 @@ import { userProfileInfoStyle } from "./userProfile.style";
 import userInfo from "@src/assets/dummyData/user-profile.json";
 import { useState } from "react";
 import * as WebBrowser from "expo-web-browser";
-import { AntDesign } from "@expo/vector-icons";
-import { Ionicons } from "@expo/vector-icons";
-import { colors } from "@src/common/colors";
+import {
+  AntDesign,
+  Ionicons,
+  MaterialCommunityIcons,
+} from "@expo/vector-icons";
+import { useLocalSearchParams } from "expo-router";
+import { EnProfileType } from "@src/common/enums";
+import { IUserProfile } from "@src/common/interfaces";
 
-const CUserProfileInfo = (): JSX.Element => {
-  //TODO: type this state, will come from context call
-  const [user, setUser] = useState(userInfo);
+const CUserProfileInfo = (user: IUserProfile): JSX.Element => {
+  const params = useLocalSearchParams();
 
   const openBrowser = async () => {
     await WebBrowser.openBrowserAsync(user.personalLink);
@@ -20,6 +24,21 @@ const CUserProfileInfo = (): JSX.Element => {
       <View style={userProfileInfoStyle.rows}>
         <AntDesign name="user" size={32} color="black" />
         <Text style={userProfileInfoStyle.userText}>@{user.username}</Text>
+      </View>
+      <View style={userProfileInfoStyle.editFollow}>
+        {params.type === EnProfileType.Personal ? (
+          <TouchableOpacity style={userProfileInfoStyle.editFollowButton}>
+            <MaterialCommunityIcons
+              name="account-edit-outline"
+              size={24}
+              color="black"
+            />
+          </TouchableOpacity>
+        ) : (
+          <TouchableOpacity style={userProfileInfoStyle.editFollowButton}>
+            <Text>Follow</Text>
+          </TouchableOpacity>
+        )}
       </View>
       <View style={userProfileInfoStyle.rows}>
         <Ionicons name="bulb-outline" size={32} color="black" />
