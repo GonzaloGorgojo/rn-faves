@@ -3,8 +3,11 @@ import { moviesFeedCardStyle, moviesFeedStyle } from "./moviesFeed.style";
 import MoviesFeedCard from "./MoviesFeedCard.component";
 import mockMovies from "@src/assets/dummyData/movies-feed.json";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
-const MoviesFeed = (): JSX.Element => {
+const MainFeed = (): JSX.Element => {
+  const { t } = useTranslation();
+
   //TODO: make real call and use useEffect
   const [movies, setMovies] = useState(mockMovies);
   return (
@@ -18,10 +21,10 @@ const MoviesFeed = (): JSX.Element => {
           renderItem={({ item }) => <MoviesFeedCard {...item} />}
         />
       ) : (
-        <Text>Start following users to see reviews on your feed </Text>
+        <Text>{t("not-following-users")}</Text>
       )}
     </View>
   );
 };
 
-export default MoviesFeed;
+export default MainFeed;

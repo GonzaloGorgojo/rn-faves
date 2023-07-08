@@ -35,7 +35,7 @@ export default function ProfileScreen(): JSX.Element {
 
   if (!isLoaded) {
     //TODO: Use a different loader
-    return <Text>Loading...</Text>;
+    return <Text>{t("loading")}</Text>;
   } else if (!isSignedIn) {
     return <Redirect href="/" />;
   }

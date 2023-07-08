@@ -1,11 +1,19 @@
 {
   "translation": {
+    "added-to-top10": "You added this to your top ten",
     "code": "Code...",
     "create-account": "Don't have account? Click here",
     "email-code-sended": "We have send you an email with the code, please insert the code below.",
+    "follow": "Follow",
+    "loading": "Loading...",
+    "not-following-users": "Start following users to see reviews on your feed",
+    "stars-collected": "Starts collected",
+    "starred-comment": "Starred comment from:",
     "sign-in": "Sign In",
     "sign-out": "Sign Out",
     "sign-up": "Sign Up",
-    "verify-email": "Verify Email"
+    "user-movie-score": "User movie score:",
+    "verify-email": "Verify Email",
+    "writed-comment": "You writed a comment"
   }
 }

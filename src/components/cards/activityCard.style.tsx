@@ -2,6 +2,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { activityCardStyle } from "./cards.style";
 import { IActivitycard } from "@src/common/interfaces";
 import { EnActivity, EnTopTen } from "@src/common/enums";
+import { useTranslation } from "react-i18next";
 
 const CActivityCard = ({
   type,
@@ -12,16 +13,17 @@ const CActivityCard = ({
   action,
   user,
 }: IActivitycard): JSX.Element => {
+  const { t } = useTranslation();
   let actionContent;
   switch (action) {
     case EnActivity.Commented:
-      actionContent = `You writed a comment`;
+      actionContent = t("writed-comment");
       break;
-    case "Starred":
-      actionContent = `You starred this comment from user @${user}`;
+    case EnActivity.Starred:
+      actionContent = `${t("starred-comment")} @${user}`;
       break;
     case EnActivity.TopTen:
-      actionContent = `You added this to your top ten`;
+      actionContent = t("added-to-top10");
       break;
     default:
       break;

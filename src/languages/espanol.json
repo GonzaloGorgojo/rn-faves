@@ -1,11 +1,19 @@
 {
   "translation": {
+    "added-to-top10": "Lo agregaste a tu top10",
     "code": "Codigo...",
     "create-account": "No tienes cuenta? Presione aquí",
     "email-code-sended": "Te enviamos un codigo al correo ingresado, ingresalo abajo.",
+    "follow": "Seguir",
+    "loading": "Cargando...",
+    "not-following-users": "Comienza a seguir usuarios para ver reviews en tu feed",
+    "stars-collected": "Estrellas ganadas",
+    "starred-comment": "Le diste una estrella a",
     "sign-in": "Iniciar Sesion",
     "sign-out": "Cerrar Sesion",
     "sign-up": "Crear Usuario",
-    "verify-email": "Verificar Email"
+    "user-movie-score": "Puntaje de la pelicula para el usuario:",
+    "verify-email": "Verificar Email",
+    "writed-comment": "Escribiste un comentario"
   }
 }

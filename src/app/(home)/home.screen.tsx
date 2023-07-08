@@ -1,5 +1,5 @@
 import { useAuth } from "@clerk/clerk-expo";
-import MoviesFeed from "@src/components/moviesFeed/MoviesFeed.component";
+import MainFeed from "@src/components/moviesFeed/MoviesFeed.component";
 import CSearchBar from "@src/components/searchBar/SearchBar.component";
 import { Redirect, Stack, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
@@ -20,7 +20,7 @@ export default function HomeScreen(): JSX.Element {
     <SafeAreaView edges={["bottom"]} style={styles.container}>
       <StatusBar style="dark" />
       <CSearchBar />
-      <MoviesFeed />
+      <MainFeed />
     </SafeAreaView>
   );
 }

@@ -11,9 +11,11 @@ import {
 import { useLocalSearchParams } from "expo-router";
 import { EnProfileType } from "@src/common/enums";
 import { IUserProfile } from "@src/common/interfaces";
+import { useTranslation } from "react-i18next";
 
 const CUserProfileInfo = (user: IUserProfile): JSX.Element => {
   const params = useLocalSearchParams();
+  const { t } = useTranslation();
 
   const openBrowser = async () => {
     await WebBrowser.openBrowserAsync(user.personalLink);
@@ -36,7 +38,7 @@ const CUserProfileInfo = (user: IUserProfile): JSX.Element => {
           </TouchableOpacity>
         ) : (
           <TouchableOpacity style={userProfileInfoStyle.editFollowButton}>
-            <Text>Follow</Text>
+            <Text>{t("follow")}</Text>
           </TouchableOpacity>
         )}
       </View>
@@ -57,7 +59,7 @@ const CUserProfileInfo = (user: IUserProfile): JSX.Element => {
       <View style={userProfileInfoStyle.rows}>
         <AntDesign name="staro" size={32} color="black" />
         <Text style={userProfileInfoStyle.userText}>
-          Stars collected: {user.starsCollected}
+          {t("stars-collected")}: {user.starsCollected}
         </Text>
       </View>
     </View>

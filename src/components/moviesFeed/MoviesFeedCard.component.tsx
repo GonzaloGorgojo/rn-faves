@@ -7,6 +7,7 @@ import { colors } from "@src/common/colors";
 import { AntDesign } from "@expo/vector-icons";
 import { IMoviesFeedCard } from "@src/common/interfaces";
 import { EnProfileType } from "@src/common/enums";
+import { useTranslation } from "react-i18next";
 
 const MoviesFeedCard = ({
   username,
@@ -18,6 +19,8 @@ const MoviesFeedCard = ({
   isLiked,
   id,
 }: IMoviesFeedCard): JSX.Element => {
+  const { t } = useTranslation();
+
   //TODO: make call to backend and update state
   const setIsLiked = (id: number) => {
     alert(`will update state ${id}`);
@@ -57,7 +60,9 @@ const MoviesFeedCard = ({
         </Text>
       </TouchableOpacity>
       <View style={moviesFeedCardStyle.ranking}>
-        <Text style={{ fontSize: 16 }}>User Ranking: {movieScore}</Text>
+        <Text style={{ fontSize: 16 }}>
+          {t("user-movie-score")} {movieScore}
+        </Text>
       </View>
       <Text style={moviesFeedCardStyle.comment}>{movieComment}</Text>
       <View style={moviesFeedCardStyle.likeIconContainer}>
