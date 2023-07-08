@@ -1,13 +1,13 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export const userProfileInfoStyle = StyleSheet.create({
   container: {
-    width: "98%",
+    width: '98%',
     marginTop: 10,
   },
   rows: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingHorizontal: 5,
     marginVertical: 2,
   },
@@ -16,11 +16,11 @@ export const userProfileInfoStyle = StyleSheet.create({
     marginLeft: 5,
   },
   editFollow: {
-    position: "absolute",
+    position: 'absolute',
     right: 20,
   },
   editFollowButton: {
-    borderColor: "black",
+    borderColor: 'black',
     borderWidth: 1,
     borderRadius: 50,
     padding: 7,
@@ -31,7 +31,7 @@ export const userProfileTabsStyle = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 15,
-    width: "100%",
+    width: '100%',
   },
 });
 
@@ -40,13 +40,13 @@ export const topTenStyle = StyleSheet.create({
     flex: 1,
   },
   iconsContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-around",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
     marginVertical: 10,
   },
   icon: {
-    borderColor: "black",
+    borderColor: 'black',
     borderWidth: 1,
     borderRadius: 50,
     padding: 10,
@@ -59,6 +59,6 @@ export const topTenStyle = StyleSheet.create({
 export const activityStyle = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
+    alignItems: 'center',
   },
 });

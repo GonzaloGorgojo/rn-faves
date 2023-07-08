@@ -1,11 +1,11 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    borderColor: "red",
+    borderColor: 'red',
     borderWidth: 2,
-    width: "90%",
+    width: '90%',
     marginTop: 5,
-    alignItems: "center",
+    alignItems: 'center',
   },
 });

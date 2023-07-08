@@ -1,20 +1,22 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import {
   ImageBackground,
   StyleSheet,
   Text,
   TextInput,
   View,
-} from "react-native";
-import { useSignUp } from "@clerk/clerk-expo";
-import { useState } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import SignButton from "@src/components/signButton/SignButton.component";
-import UserForm from "@src/components/userForm/UserForm.component";
-import { Image } from "expo-image";
-import UserFormStyle from "@src/components/userForm/userForm.style";
-import { useRouter } from "expo-router";
-import { StatusBar } from "expo-status-bar";
-import { useTranslation } from "react-i18next";
+} from 'react-native';
+import { useSignUp } from '@clerk/clerk-expo';
+import { useState } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import SignButton from '@src/components/signButton/SignButton.component';
+import UserForm from '@src/components/userForm/UserForm.component';
+import { Image } from 'expo-image';
+import UserFormStyle from '@src/components/userForm/userForm.style';
+import { useRouter } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { useTranslation } from 'react-i18next';
 
 const SignUpScreen = (): JSX.Element => {
   const router = useRouter();
@@ -23,10 +25,10 @@ const SignUpScreen = (): JSX.Element => {
   const { isLoaded, signUp, setActive } = useSignUp();
 
   const [showPassword, setShowPassword] = useState<boolean>(true);
-  const [username, setUsername] = useState<string>("");
-  const [emailAddress, setEmailAddress] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [code, setCode] = useState<string>("");
+  const [username, setUsername] = useState<string>('');
+  const [emailAddress, setEmailAddress] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [code, setCode] = useState<string>('');
 
   const [pendingVerification, setPendingVerification] =
     useState<boolean>(false);
@@ -46,7 +48,7 @@ const SignUpScreen = (): JSX.Element => {
 
       // send the email.
       await signUp.prepareEmailAddressVerification({
-        strategy: "email_code",
+        strategy: 'email_code',
       });
       // change the UI to our pending section.
       setPendingVerification(true);
@@ -69,9 +71,9 @@ const SignUpScreen = (): JSX.Element => {
       await setActive({
         session: completeSignUp.createdSessionId,
       });
-      if (completeSignUp.status == "complete") {
-        alert("Account has been created successfully");
-        router.replace("/");
+      if (completeSignUp.status == 'complete') {
+        alert('Account has been created successfully');
+        router.replace('/');
       }
     } catch (err: any) {
       alert(err.errors ? err.errors[0].message : err);
@@ -81,7 +83,7 @@ const SignUpScreen = (): JSX.Element => {
   return (
     <ImageBackground
       style={styles.bgImage}
-      source={require("@src/assets/images/wall.jpg")}
+      source={require('@src/assets/images/wall.jpg')}
     >
       <SafeAreaView style={styles.container}>
         <StatusBar style="dark" />
@@ -91,7 +93,7 @@ const SignUpScreen = (): JSX.Element => {
             <View style={styles.logoContainer}>
               <Image
                 style={styles.logo}
-                source={require("@src/assets/images/logo.png")}
+                source={require('@src/assets/images/logo.png')}
               ></Image>
             </View>
             <UserForm
@@ -106,20 +108,26 @@ const SignUpScreen = (): JSX.Element => {
               setPassword={setPassword}
             />
 
-            <SignButton title={t("sign-up")} onPress={onSignUpPress} />
+            <SignButton
+              title={t('sign-up')}
+              onPress={() => void onSignUpPress()}
+            />
           </>
         )}
         {pendingVerification && (
           <>
-            <Text style={styles.codeTitle}>{t("email-code-sended")}</Text>
+            <Text style={styles.codeTitle}>{t('email-code-sended')}</Text>
             <TextInput
-              style={{ ...UserFormStyle.input, width: "40%" }}
+              style={{ ...UserFormStyle.input, width: '40%' }}
               value={code}
-              placeholder={t("code") ?? undefined}
+              placeholder={t('code') ?? undefined}
               onChangeText={(code) => setCode(code)}
               placeholderTextColor="grey"
             />
-            <SignButton title={t("verify-email")} onPress={onPressVerify} />
+            <SignButton
+              title={t('verify-email')}
+              onPress={() => void onPressVerify()}
+            />
           </>
         )}
       </SafeAreaView>
@@ -130,25 +138,25 @@ const SignUpScreen = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   bgImage: {
     flex: 1,
   },
   logoContainer: {
-    width: "80%",
-    height: "25%",
+    width: '80%',
+    height: '25%',
   },
   logo: {
     flex: 1,
-    contentFit: "contain",
+    contentFit: 'contain',
   },
   codeTitle: {
     fontSize: 20,
     marginVertical: 5,
     marginHorizontal: 10,
-    textAlign: "justify",
+    textAlign: 'justify',
   },
 });
 

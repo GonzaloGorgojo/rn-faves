@@ -1,18 +1,17 @@
-import { ClerkProvider } from "@clerk/clerk-expo";
-import { Link, Stack } from "expo-router";
-import { CLERK_PUBLISHABLE_KEY } from "@env";
-import * as SecureStore from "expo-secure-store";
-import { Entypo, FontAwesome5 } from "@expo/vector-icons";
-import { Text, TouchableOpacity } from "react-native";
-import commonStyles from "@src/common/commonStyles";
-import { colors } from "@src/common/colors";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { EnProfileType } from "@src/common/enums";
+import { ClerkProvider } from '@clerk/clerk-expo';
+import { Link, Stack } from 'expo-router';
+import { CLERK_PUBLISHABLE_KEY } from '@env';
+import * as SecureStore from 'expo-secure-store';
+import { Entypo, FontAwesome5 } from '@expo/vector-icons';
+import { Text, TouchableOpacity } from 'react-native';
+import commonStyles from '@src/common/commonStyles';
+import { colors } from '@src/common/colors';
+import { EnProfileType } from '@src/common/enums';
 
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
-} from "expo-router";
+} from 'expo-router';
 
 const tokenCache = {
   async getToken(key: string) {
@@ -43,7 +42,7 @@ export default function RootLayout() {
             <>
               <Entypo name="emoji-happy" size={24} color="black" />
               <Text style={{ ...commonStyles.title, fontSize: 25 }}>
-                {" "}
+                {' '}
                 Fave-s
               </Text>
             </>
@@ -51,20 +50,20 @@ export default function RootLayout() {
           headerStyle: {
             backgroundColor: colors.mainColor,
           },
-          headerTitleAlign: "center",
-          headerBackTitle: "Back",
+          headerTitleAlign: 'center',
+          headerBackTitle: 'Back',
         }}
       >
         <Stack.Screen
           name="(auth)/signIn.screen"
           options={{
-            title: `Sign In`,
+            title: 'Sign In',
           }}
         />
         <Stack.Screen
           name="(auth)/signUp.screen"
           options={{
-            title: `Sign Up`,
+            title: 'Sign Up',
           }}
         />
         <Stack.Screen
@@ -73,7 +72,7 @@ export default function RootLayout() {
             headerRight: () => (
               <Link
                 href={{
-                  pathname: "(user)/profile.screen",
+                  pathname: '(user)/profile.screen',
                   params: { type: EnProfileType.Personal },
                 }}
                 asChild
@@ -88,7 +87,7 @@ export default function RootLayout() {
         <Stack.Screen
           name="(user)/profile.screen"
           options={{
-            title: `Profile`,
+            title: 'Profile',
           }}
         />
       </Stack>

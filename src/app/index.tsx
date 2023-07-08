@@ -1,15 +1,15 @@
-import { SignedIn, SignedOut } from "@clerk/clerk-expo";
-import { Redirect } from "expo-router";
-import "@src/languages/i18n";
+import { SignedIn, SignedOut } from '@clerk/clerk-expo';
+import { Redirect } from 'expo-router';
+import '@src/languages/i18n';
 
 export default function InitialScreen() {
   return (
     <>
       <SignedIn>
-        <Redirect href={"(home)/home.screen"} />
+        <Redirect href={'(home)/home.screen'} />
       </SignedIn>
       <SignedOut>
-        <Redirect href={"(auth)/signIn.screen"} />
+        <Redirect href={'(auth)/signIn.screen'} />
       </SignedOut>
     </>
   );

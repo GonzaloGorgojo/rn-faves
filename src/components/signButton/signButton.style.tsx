@@ -1,16 +1,16 @@
-import { colors } from "@src/common/colors";
-import { StyleSheet } from "react-native";
+import { colors } from '@src/common/colors';
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   button: {
     borderRadius: 3,
-    textAlign: "center",
+    textAlign: 'center',
     paddingVertical: 5,
     paddingHorizontal: 10,
     backgroundColor: colors.mainColor,
     borderWidth: 1,
-    borderStyle: "solid",
-    borderColor: "black",
+    borderStyle: 'solid',
+    borderColor: 'black',
     marginVertical: 5,
   },
   text: {

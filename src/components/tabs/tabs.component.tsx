@@ -1,8 +1,8 @@
-import { ITabs } from "@src/common/interfaces";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { tabsStyle } from "./tabs.style";
-import { Text, TouchableOpacity } from "react-native";
-import { colors } from "@src/common/colors";
+import { ITabs } from '@src/common/interfaces';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { tabsStyle } from './tabs.style';
+import { Text, TouchableOpacity } from 'react-native';
+import { colors } from '@src/common/colors';
 
 const CTabs = ({
   titles,
@@ -11,7 +11,7 @@ const CTabs = ({
   profileFeed,
 }: ITabs): JSX.Element => {
   return (
-    <SafeAreaView edges={["left", "right"]} style={tabsStyle.container}>
+    <SafeAreaView edges={['left', 'right']} style={tabsStyle.container}>
       {titles.map((t) => (
         <TouchableOpacity
           key={t}
@@ -23,8 +23,8 @@ const CTabs = ({
         >
           <Text
             style={{
-              textAlign: "center",
-              fontWeight: "bold",
+              textAlign: 'center',
+              fontWeight: 'bold',
               fontSize: titleFontSize,
             }}
           >

@@ -1,4 +1,4 @@
-import { EnActivity, EnProfileFeed, EnTopTen } from "./enums";
+import { EnActivity, EnProfileFeed, EnTopTen } from './enums';
 
 export interface IMoviesFeedCard {
   id: number;

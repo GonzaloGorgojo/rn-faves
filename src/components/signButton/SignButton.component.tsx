@@ -1,5 +1,5 @@
-import { StyleProp, Text, TouchableOpacity, ViewStyle } from "react-native";
-import SignButtonStyle from "./signButton.style";
+import { StyleProp, Text, TouchableOpacity, ViewStyle } from 'react-native';
+import SignButtonStyle from './signButton.style';
 
 type SignButtonProps = {
   title: string;

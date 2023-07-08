@@ -1,15 +1,17 @@
-import { ImageBackground, StyleSheet, View } from "react-native";
-import { useSignIn } from "@clerk/clerk-expo";
-import { useState } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { Link, useRouter } from "expo-router";
-import UserForm from "@src/components/userForm/UserForm.component";
-import SignButton from "@src/components/signButton/SignButton.component";
-import { Image } from "expo-image";
-import { StatusBar } from "expo-status-bar";
-import { useTranslation } from "react-i18next";
-import SwitchSelector from "react-native-switch-selector";
-import { colors } from "@src/common/colors";
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import { ImageBackground, StyleSheet, View } from 'react-native';
+import { useSignIn } from '@clerk/clerk-expo';
+import { useState } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Link, useRouter } from 'expo-router';
+import UserForm from '@src/components/userForm/UserForm.component';
+import SignButton from '@src/components/signButton/SignButton.component';
+import { Image } from 'expo-image';
+import { StatusBar } from 'expo-status-bar';
+import { useTranslation } from 'react-i18next';
+import SwitchSelector from 'react-native-switch-selector';
+import { colors } from '@src/common/colors';
 
 const SignInScreen = (): JSX.Element => {
   const router = useRouter();
@@ -18,16 +20,16 @@ const SignInScreen = (): JSX.Element => {
   const { signIn, setActive, isLoaded } = useSignIn();
 
   const [showPassword, setShowPassword] = useState<boolean>(true);
-  const [emailAddress, setEmailAddress] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [emailAddress, setEmailAddress] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
 
   const options = [
-    { label: "Es", value: "es" },
-    { label: "En", value: "en" },
+    { label: 'Es', value: 'es' },
+    { label: 'En', value: 'en' },
   ];
   const indexOfLan = options.findIndex((opt) => opt.value === i18n.language);
 
-  const onSignInPress = async (): Promise<void> => {
+  const onSignInPress = async () => {
     if (!isLoaded) {
       return;
     }
@@ -40,7 +42,7 @@ const SignInScreen = (): JSX.Element => {
       // This is an important step,
       // This indicates the user is signed in
       await setActive({ session: completeSignIn.createdSessionId });
-      router.replace("/");
+      router.replace('/');
     } catch (err: any) {
       alert(err.errors ? err.errors[0].message : err);
     }
@@ -49,7 +51,7 @@ const SignInScreen = (): JSX.Element => {
   return (
     <ImageBackground
       style={styles.bgImage}
-      source={require("@src/assets/images/wall.jpg")}
+      source={require('@src/assets/images/wall.jpg')}
     >
       <SafeAreaView style={styles.container}>
         <StatusBar style="dark" />
@@ -60,9 +62,9 @@ const SignInScreen = (): JSX.Element => {
             options={options}
             initial={indexOfLan}
             onPress={(value: string) => i18n.changeLanguage(value)}
-            selectedColor={"black"}
+            selectedColor={'black'}
             buttonColor={colors.mainColor}
-            borderColor={"black"}
+            borderColor={'black'}
             hasPadding
           />
         </View>
@@ -70,7 +72,7 @@ const SignInScreen = (): JSX.Element => {
         <View style={styles.logoContainer}>
           <Image
             style={styles.logo}
-            source={require("@src/assets/images/logo.png")}
+            source={require('@src/assets/images/logo.png')}
           ></Image>
         </View>
         <UserForm
@@ -83,10 +85,10 @@ const SignInScreen = (): JSX.Element => {
           password={password}
         />
 
-        <SignButton title={t("sign-in")} onPress={onSignInPress} />
+        <SignButton title={t('sign-in')} onPress={() => void onSignInPress()} />
 
-        <Link style={styles.link} href={"/signUp.screen"}>
-          {t("create-account")}
+        <Link style={styles.link} href={'/signUp.screen'}>
+          {t('create-account')}
         </Link>
       </SafeAreaView>
     </ImageBackground>
@@ -96,8 +98,8 @@ const SignInScreen = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "space-evenly",
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
   },
   bgImage: {
     flex: 1,
@@ -107,16 +109,16 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   logoContainer: {
-    width: "100%",
-    height: "25%",
+    width: '100%',
+    height: '25%',
   },
   logo: {
     flex: 1,
-    contentFit: "contain",
+    contentFit: 'contain',
   },
   switch: {
-    width: "22%",
-    position: "absolute",
+    width: '22%',
+    position: 'absolute',
     top: 50,
     right: 20,
   },

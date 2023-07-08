@@ -1,13 +1,13 @@
-import { topTenStyle } from "./userProfile.style";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { useState } from "react";
-import { EnTopTen } from "@src/common/enums";
-import music from "@src/assets/dummyData/music.json";
-import movies from "@src/assets/dummyData/movies.json";
-import CTopTenCard from "../cards/topTenCard.component";
-import { colors } from "@src/common/colors";
+import { topTenStyle } from './userProfile.style';
+import { ScrollView, TouchableOpacity, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useState } from 'react';
+import { EnTopTen } from '@src/common/enums';
+import music from '@src/assets/dummyData/music.json';
+import movies from '@src/assets/dummyData/movies.json';
+import CTopTenCard from '../cards/topTenCard.component';
+import { colors } from '@src/common/colors';
 
 const CTopTen = (): JSX.Element => {
   const [topTen, setTopTen] = useState<EnTopTen>(EnTopTen.Music);
@@ -45,7 +45,7 @@ const CTopTen = (): JSX.Element => {
 
       <ScrollView
         style={topTenStyle.topTen}
-        contentContainerStyle={{ alignItems: "center" }}
+        contentContainerStyle={{ alignItems: 'center' }}
       >
         {topTen === EnTopTen.Music
           ? music.map((e) => {

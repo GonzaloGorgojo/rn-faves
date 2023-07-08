@@ -1,6 +1,6 @@
-import { TextInput, TouchableOpacity, View } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
-import searchBarStyles from "./searchBar.style";
+import { TextInput, TouchableOpacity, View } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
+import searchBarStyles from './searchBar.style';
 
 const CSearchBar = (): JSX.Element => {
   return (

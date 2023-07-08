@@ -1,14 +1,14 @@
-import { userProfileTabsStyle } from "./userProfile.style";
-import CTabs from "@src/components/tabs/tabs.component";
-import { useState } from "react";
-import { EnProfileFeed } from "@src/common/enums";
-import { View } from "react-native";
-import CTopTen from "./topTen.component";
-import CProfileActivity from "./activity.component";
+import { userProfileTabsStyle } from './userProfile.style';
+import CTabs from '@src/components/tabs/tabs.component';
+import { useState } from 'react';
+import { EnProfileFeed } from '@src/common/enums';
+import { View } from 'react-native';
+import CTopTen from './topTen.component';
+import CProfileActivity from './activity.component';
 
 const CUserProfileTabs = (): JSX.Element => {
   const [profileFeed, setProfileFeed] = useState<EnProfileFeed>(
-    EnProfileFeed.Activity
+    EnProfileFeed.Activity,
   );
 
   let content;

@@ -1,24 +1,24 @@
 export enum EnFeedCardType {
-  Movies = "movies",
+  Movies = 'movies',
 }
 
 export enum EnProfileFeed {
-  Top10 = "Top 10",
-  Activity = "Activity",
+  Top10 = 'Top 10',
+  Activity = 'Activity',
 }
 
 export enum EnTopTen {
-  Music = "Music",
-  Movie = "Movie",
+  Music = 'Music',
+  Movie = 'Movie',
 }
 
 export enum EnActivity {
-  Starred = "Starred",
-  Commented = "Commented",
-  TopTen = "TopTen",
+  Starred = 'Starred',
+  Commented = 'Commented',
+  TopTen = 'TopTen',
 }
 
 export enum EnProfileType {
-  Personal = "Personal",
-  Visitor = "Visitor",
+  Personal = 'Personal',
+  Visitor = 'Visitor',
 }

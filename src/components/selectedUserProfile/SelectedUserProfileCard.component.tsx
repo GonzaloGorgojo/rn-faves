@@ -1,7 +1,7 @@
-import { Text, View } from "react-native";
-import selectedUserProfileStyle from "./selectedUserProfile.style";
-import commonStyles from "@src/common/commonStyles";
-import { ISelectedUserProfile } from "@src/common/interfaces";
+import { Text, View } from 'react-native';
+import selectedUserProfileStyle from './selectedUserProfile.style';
+import commonStyles from '@src/common/commonStyles';
+import { ISelectedUserProfile } from '@src/common/interfaces';
 
 const SelectedUserProfile = ({
   username,

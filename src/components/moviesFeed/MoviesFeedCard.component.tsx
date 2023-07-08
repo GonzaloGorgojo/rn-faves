@@ -1,13 +1,13 @@
-import { Text, TouchableOpacity, View } from "react-native";
-import { moviesFeedCardStyle } from "./moviesFeed.style";
-import commonStyles from "@src/common/commonStyles";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Link } from "expo-router";
-import { colors } from "@src/common/colors";
-import { AntDesign } from "@expo/vector-icons";
-import { IMoviesFeedCard } from "@src/common/interfaces";
-import { EnProfileType } from "@src/common/enums";
-import { useTranslation } from "react-i18next";
+import { Text, TouchableOpacity, View } from 'react-native';
+import { moviesFeedCardStyle } from './moviesFeed.style';
+import commonStyles from '@src/common/commonStyles';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Link } from 'expo-router';
+import { colors } from '@src/common/colors';
+import { AntDesign } from '@expo/vector-icons';
+import { IMoviesFeedCard } from '@src/common/interfaces';
+import { EnProfileType } from '@src/common/enums';
+import { useTranslation } from 'react-i18next';
 
 const MoviesFeedCard = ({
   username,
@@ -32,7 +32,7 @@ const MoviesFeedCard = ({
         <Link
           asChild
           href={{
-            pathname: "(user)/profile.screen",
+            pathname: '(user)/profile.screen',
             params: { type: EnProfileType.Visitor, userId },
           }}
         >
@@ -42,17 +42,17 @@ const MoviesFeedCard = ({
             </Text>
           </TouchableOpacity>
         </Link>
-        {tag === "movie" ? (
+        {tag === 'movie' ? (
           <MaterialCommunityIcons name="movie" size={25} color="black" />
         ) : (
-          ""
+          ''
         )}
       </View>
-      <TouchableOpacity onPress={() => alert("go to movie info")}>
+      <TouchableOpacity onPress={() => alert('go to movie info')}>
         <Text
           style={{
             ...commonStyles.title,
-            textTransform: "capitalize",
+            textTransform: 'capitalize',
             color: colors.customBlue,
           }}
         >
@@ -61,7 +61,7 @@ const MoviesFeedCard = ({
       </TouchableOpacity>
       <View style={moviesFeedCardStyle.ranking}>
         <Text style={{ fontSize: 16 }}>
-          {t("user-movie-score")} {movieScore}
+          {t('user-movie-score')} {movieScore}
         </Text>
       </View>
       <Text style={moviesFeedCardStyle.comment}>{movieComment}</Text>

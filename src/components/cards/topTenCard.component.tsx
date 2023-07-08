@@ -1,7 +1,7 @@
-import { Text, View } from "react-native";
-import { topTenCardStyle } from "./cards.style";
-import { IMovieCard } from "@src/common/interfaces";
-import { EnTopTen } from "@src/common/enums";
+import { Text, View } from 'react-native';
+import { topTenCardStyle } from './cards.style';
+import { IMovieCard } from '@src/common/interfaces';
+import { EnTopTen } from '@src/common/enums';
 
 const CTopTenCard = ({
   type,
@@ -18,10 +18,10 @@ const CTopTenCard = ({
         <Text
           style={{
             flex: 1,
-            fontWeight: "900",
+            fontWeight: '900',
             fontSize: 18,
-            textTransform: "capitalize",
-            textAlign: "center",
+            textTransform: 'capitalize',
+            textAlign: 'center',
           }}
         >
           {type === EnTopTen.Music ? artist : movie}
@@ -29,7 +29,7 @@ const CTopTenCard = ({
       </View>
       <Text
         style={{
-          textAlign: "center",
+          textAlign: 'center',
           marginHorizontal: 5,
         }}
       >

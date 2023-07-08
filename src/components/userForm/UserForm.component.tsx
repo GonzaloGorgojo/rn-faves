@@ -1,7 +1,7 @@
-import { SafeAreaView } from "react-native-safe-area-context";
-import { TextInput, TouchableOpacity, View } from "react-native";
-import UserFormStyle from "./userForm.style";
-import { Ionicons } from "@expo/vector-icons";
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { TextInput, TouchableOpacity, View } from 'react-native';
+import UserFormStyle from './userForm.style';
+import { Ionicons } from '@expo/vector-icons';
 
 type userFormProps = {
   isUsername: boolean;
@@ -35,11 +35,11 @@ const UserForm = ({
           value={username}
           placeholder="Username..."
           onChangeText={(username) =>
-            setUsername ? setUsername(username) : ""
+            setUsername ? setUsername(username) : ''
           }
         />
       ) : (
-        ""
+        ''
       )}
       <TextInput
         placeholderTextColor="grey"
@@ -53,8 +53,8 @@ const UserForm = ({
       <View
         style={{
           ...UserFormStyle.input,
-          flexDirection: "row",
-          justifyContent: "space-between",
+          flexDirection: 'row',
+          justifyContent: 'space-between',
         }}
       >
         <TextInput

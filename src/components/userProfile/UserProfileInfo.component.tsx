@@ -1,17 +1,15 @@
-import { Text, TouchableOpacity, View } from "react-native";
-import { userProfileInfoStyle } from "./userProfile.style";
-import userInfo from "@src/assets/dummyData/user-profile.json";
-import { useState } from "react";
-import * as WebBrowser from "expo-web-browser";
+import { Text, TouchableOpacity, View } from 'react-native';
+import { userProfileInfoStyle } from './userProfile.style';
+import * as WebBrowser from 'expo-web-browser';
 import {
   AntDesign,
   Ionicons,
   MaterialCommunityIcons,
-} from "@expo/vector-icons";
-import { useLocalSearchParams } from "expo-router";
-import { EnProfileType } from "@src/common/enums";
-import { IUserProfile } from "@src/common/interfaces";
-import { useTranslation } from "react-i18next";
+} from '@expo/vector-icons';
+import { useLocalSearchParams } from 'expo-router';
+import { EnProfileType } from '@src/common/enums';
+import { IUserProfile } from '@src/common/interfaces';
+import { useTranslation } from 'react-i18next';
 
 const CUserProfileInfo = (user: IUserProfile): JSX.Element => {
   const params = useLocalSearchParams();
@@ -38,7 +36,7 @@ const CUserProfileInfo = (user: IUserProfile): JSX.Element => {
           </TouchableOpacity>
         ) : (
           <TouchableOpacity style={userProfileInfoStyle.editFollowButton}>
-            <Text>{t("follow")}</Text>
+            <Text>{t('follow')}</Text>
           </TouchableOpacity>
         )}
       </View>
@@ -46,9 +44,12 @@ const CUserProfileInfo = (user: IUserProfile): JSX.Element => {
         <Ionicons name="bulb-outline" size={32} color="black" />
         <Text style={userProfileInfoStyle.userText}>{user.description}</Text>
       </View>
-      <TouchableOpacity onPress={openBrowser} style={userProfileInfoStyle.rows}>
+      <TouchableOpacity
+        onPress={() => void openBrowser()}
+        style={userProfileInfoStyle.rows}
+      >
         <AntDesign name="link" size={32} color="black" />
-        <Text style={{ ...userProfileInfoStyle.userText, color: "blue" }}>
+        <Text style={{ ...userProfileInfoStyle.userText, color: 'blue' }}>
           {user.personalLink}
         </Text>
       </TouchableOpacity>
@@ -59,7 +60,7 @@ const CUserProfileInfo = (user: IUserProfile): JSX.Element => {
       <View style={userProfileInfoStyle.rows}>
         <AntDesign name="staro" size={32} color="black" />
         <Text style={userProfileInfoStyle.userText}>
-          {t("stars-collected")}: {user.starsCollected}
+          {t('stars-collected')}: {user.starsCollected}
         </Text>
       </View>
     </View>
