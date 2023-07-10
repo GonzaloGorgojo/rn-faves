@@ -1,7 +1,6 @@
 import { topTenStyle } from './userProfile.style';
 import { ScrollView, TouchableOpacity, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useState } from 'react';
 import { EnTopTen } from '@src/common/enums';
 import music from '@src/assets/dummyData/music.json';

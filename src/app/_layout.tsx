@@ -67,12 +67,13 @@ export default function RootLayout() {
           }}
         />
         <Stack.Screen
-          name="(home)/home.screen"
+          name="(home)"
           options={{
+            title: 'Home',
             headerRight: () => (
               <Link
                 href={{
-                  pathname: '(user)/profile.screen',
+                  pathname: '/profile.screen',
                   params: { type: EnProfileType.Personal },
                 }}
                 asChild
@@ -88,6 +89,12 @@ export default function RootLayout() {
           name="(user)/profile.screen"
           options={{
             title: 'Profile',
+          }}
+        />
+        <Stack.Screen
+          name="(tastes)/musicTaste.screen"
+          options={{
+            title: 'Music Taste',
           }}
         />
       </Stack>

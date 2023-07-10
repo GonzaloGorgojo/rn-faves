@@ -49,6 +49,7 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
+    'no-duplicate-imports': 'error',
   },
   settings: {
     react: {

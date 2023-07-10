@@ -4,12 +4,12 @@ import CSearchBar from '@src/components/searchBar/SearchBar.component';
 import { Redirect } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useTranslation } from 'react-i18next';
-import { StyleSheet, Text } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default function HomeScreen(): JSX.Element {
+export default function NewsScreen(): JSX.Element {
   const { isLoaded, isSignedIn } = useAuth();
   const { t } = useTranslation();
+
   if (!isLoaded) {
     return <Text>{t('loading')}</Text>;
   } else if (!isSignedIn) {
@@ -17,11 +17,11 @@ export default function HomeScreen(): JSX.Element {
   }
 
   return (
-    <SafeAreaView edges={['bottom']} style={styles.container}>
+    <View style={styles.container}>
       <StatusBar style="dark" />
       <CSearchBar />
       <MainFeed />
-    </SafeAreaView>
+    </View>
   );
 }
 

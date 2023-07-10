@@ -1,10 +1,9 @@
 import { Text, TouchableOpacity, View } from 'react-native';
 import { moviesFeedCardStyle } from './moviesFeed.style';
 import commonStyles from '@src/common/commonStyles';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import { colors } from '@src/common/colors';
-import { AntDesign } from '@expo/vector-icons';
 import { IMoviesFeedCard } from '@src/common/interfaces';
 import { EnProfileType } from '@src/common/enums';
 import { useTranslation } from 'react-i18next';

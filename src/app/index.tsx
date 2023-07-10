@@ -6,10 +6,10 @@ export default function InitialScreen() {
   return (
     <>
       <SignedIn>
-        <Redirect href={'(home)/home.screen'} />
+        <Redirect href={'/news.screen'} />
       </SignedIn>
       <SignedOut>
-        <Redirect href={'(auth)/signIn.screen'} />
+        <Redirect href={'/signIn.screen'} />
       </SignedOut>
     </>
   );

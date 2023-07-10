@@ -22,3 +22,9 @@ export enum EnProfileType {
   Personal = 'Personal',
   Visitor = 'Visitor',
 }
+
+export enum EnTasteCategory {
+  Initial = 'Initial',
+  Movies = 'Movies',
+  Music = 'Music',
+}
