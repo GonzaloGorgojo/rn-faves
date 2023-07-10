@@ -91,12 +91,6 @@ export default function RootLayout() {
             title: 'Profile',
           }}
         />
-        <Stack.Screen
-          name="(tastes)/musicTaste.screen"
-          options={{
-            title: 'Music Taste',
-          }}
-        />
       </Stack>
     </ClerkProvider>
   );
