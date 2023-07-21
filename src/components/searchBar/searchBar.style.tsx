@@ -1,3 +1,4 @@
+import { colors } from '@src/common/colors';
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
@@ -13,7 +14,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     padding: 3,
     paddingLeft: 5,
-    borderColor: 'grey',
+    borderColor: colors.customBlue,
     width: '75%',
     borderRadius: 5,
   },

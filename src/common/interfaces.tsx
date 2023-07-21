@@ -18,7 +18,7 @@ export interface ITabs {
   profileFeed: EnProfileFeed;
 }
 
-export interface IMovieCard {
+export interface ITopTenCard {
   type: EnTopTen;
   rank: number;
   song?: string;
@@ -45,4 +45,8 @@ export interface IUserProfile {
   starsCollected: number;
   description: string;
   country: string;
+}
+
+export interface ITastesSearch {
+  tasteType: EnTopTen;
 }

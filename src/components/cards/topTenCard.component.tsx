@@ -1,6 +1,6 @@
 import { Text, View } from 'react-native';
 import { topTenCardStyle } from './cards.style';
-import { IMovieCard } from '@src/common/interfaces';
+import { ITopTenCard } from '@src/common/interfaces';
 import { EnTopTen } from '@src/common/enums';
 
 const CTopTenCard = ({
@@ -10,7 +10,7 @@ const CTopTenCard = ({
   song,
   movie,
   description,
-}: IMovieCard): JSX.Element => {
+}: ITopTenCard): JSX.Element => {
   return (
     <View style={topTenCardStyle.container}>
       <View style={topTenCardStyle.cardTitle}>
